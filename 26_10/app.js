@@ -66,6 +66,6 @@ num3 += 12;
 num3 -= 14;
 num3 *= 5;
 num3 /= 7;
-num3 += 1;
-num3 -= 1;
+num3++;
+num3--;
 alert(num3);
