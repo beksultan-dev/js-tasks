@@ -15,14 +15,7 @@ let currentTime = `${hour}:${minute}:${second}`;
 console.log(currentTime);
 
 /****** 3 *******/
-/*
-var num = 10;
-num = num + 1;
-num = num + 1;
-alert(num);
-*/
-
 let num = 10;
-num = ++num;
-num = ++num;
+++num;
+++num;
 alert(num);
