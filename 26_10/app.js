@@ -3,7 +3,7 @@ let userName = 'Beksultan';
 let userAge = 22;
 
 console.log(userName === 'beksultan' && userAge === 22); //false && true
-console.log(userName == 'Beksultan' && userAge == 21); //true && false
+console.log(userName === 'Beksultan' && userAge === 21); //true && false
 console.log(userName !== 'Beksultan' && userAge !== 22); //false && false
 console.log(userName === 'Beksultan' && userAge === 22); //true && true
 
@@ -12,10 +12,10 @@ console.log(userName === 'Beksultan' && userAge === 22); //true && true
 let userName2 = 'Alex';
 let userAge2 = 33;
 
-console.log(userName2 === 'alex' && userAge2 === 33); //false && true
-console.log(userName2 == 'Alex' && userAge2 == 30); //true && false
-console.log(userName2 !== 'Alex' && userAge2 !== 33); //false && false
-console.log(userName2 === 'Alex' && userAge2 === 33); //true && true
+console.log(userName2 === 'alex' || userAge2 === 33); //false && true
+console.log(userName2 === 'Alex' || userAge2 === 30); //true && false
+console.log(userName2 !== 'Alex' || userAge2 !== 33); //false && false
+console.log(userName2 === 'Alex' || userAge2 === 33); //true && true
 
 
 // 1) Переделать этот код так, чтобы в нем были операторы инкремента и декремента:
