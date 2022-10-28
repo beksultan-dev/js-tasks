@@ -4,9 +4,7 @@ console.log(`1) Переменная x:${x}`);
 
 if (x === 7) {
 	console.log('Верно');
-} else if (typeof x !== 'number') {
-	console.log('Введите число!');
-} else if (x !== 7) {
+} else {
 	console.log('Неверно');
 }
 
