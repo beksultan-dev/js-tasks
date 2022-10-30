@@ -31,8 +31,8 @@ console.log(`2) Сумма:${numbersSum}`);
 // }
 
 let number;
-let data;
+let data = 6;
 
-number = data === true ? number = 3 : number = 5;
+number = data ? 3 : 5;
 
 console.log(number);
