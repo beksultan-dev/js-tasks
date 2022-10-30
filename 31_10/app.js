@@ -5,10 +5,7 @@ userSaleries.Ella = 420;
 userSaleries.Sophie = 500;
 userSaleries.Ellie = 250;
 
-let ella = userSaleries.Ella;
-let ellie = userSaleries.Ellie;
-
-console.log(`1) Зарплата Ella:${ella}, Зарплата Ellie:${ellie}`);
+console.log(`1) Зарплата Ella:${userSaleries.Ella}, Зарплата Ellie:${userSaleries.Ellie}`);
 
 
 // ********** task 2 *************
