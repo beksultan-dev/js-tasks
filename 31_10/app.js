@@ -19,7 +19,7 @@ const numbers = {
 }
 
 let numbersSum = numbers.a + numbers.b + numbers.c;
-console.log(`2) Суммы:${numbersSum}`);
+console.log(`2) Сумма:${numbersSum}`);
 
 
 // ********** task 3 *************
@@ -34,3 +34,5 @@ let number;
 let data;
 
 number = data === true ? number = 3 : number = 5;
+
+console.log(number);
