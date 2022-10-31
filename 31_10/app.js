@@ -5,7 +5,7 @@ userSaleries.Ella = 420;
 userSaleries.Sophie = 500;
 userSaleries.Ellie = 250;
 
-console.log(`1) Зарплата Ella:${userSaleries.Ella}, Зарплата Ellie:${userSaleries.Ellie}`);
+console.log(`Зарплата Ella: ${userSaleries.Ella}, Зарплата Ellie: ${userSaleries.Ellie}`);
 
 
 // ********** task 2 *************
@@ -16,20 +16,12 @@ const numbers = {
 }
 
 let numbersSum = numbers.a + numbers.b + numbers.c;
-console.log(`2) Сумма:${numbersSum}`);
+console.log(`Сумма: ${numbersSum}`);
 
 
 // ********** task 3 *************
-// let number;
-// if(data === true){
-//    number = 3;
-// } else{
-//    number = 5;
-// }
-
 let number;
-let data = 6;
+let data;
 
 number = data ? 3 : 5;
-
 console.log(number);
