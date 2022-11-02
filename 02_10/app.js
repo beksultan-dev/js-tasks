@@ -16,7 +16,7 @@ showPow(3);
 // ************** task 3 ****************
 const userName = 'Василий';
 
-function getName(user = 'Привет, гость') {
+function getName(user = 'Гость') {
 	console.log(`Привет, ${user}`);
 }
 getName(userName);
