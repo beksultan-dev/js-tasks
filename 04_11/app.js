@@ -15,20 +15,23 @@ const checkNumber = (number) => {
 
 let result = '';
 
-for (let i = 0; i < 1; i++) {
-	let firstNumber = Number(inputNumber());
-	let firstNumberResult = checkNumber(firstNumber);
+function check() {
+	for (let i = 0; i < 1; i++) {
+		let firstNumber = Number(inputNumber());
+		let firstNumberResult = checkNumber(firstNumber);
 
-	if (firstNumberResult === 'плюс') {
-		result += `${firstNumberResult} `;
-		i--;
-		console.log(result);
-	} else if (firstNumberResult === 'минус') {
-		result += `${firstNumberResult} `;
-		i--;
-		console.log(result);
+		if (firstNumberResult === 'плюс') {
+			result += `${firstNumberResult} `;
+			i--;
+			console.log(result);
+		} else if (firstNumberResult === 'минус') {
+			result += `${firstNumberResult} `;
+			i--;
+			console.log(result);
+		}
 	}
 }
+check();
 
 
 // ********** task 2 ***********
