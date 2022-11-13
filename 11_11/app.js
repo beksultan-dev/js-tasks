@@ -1,8 +1,7 @@
-const btn = document.querySelector('#btn');
 const btn_all = document.querySelector('#btn-all');
-const myArr = [];
-
 const images = document.querySelectorAll('#images img');
+
+const myArr = [];
 
 for (let i = 0; i < images.length; i++) {
 	images[i].onclick = () => {
