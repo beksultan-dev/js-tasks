@@ -4,37 +4,37 @@ const success_btn = document.querySelector('#success-btn');
 const notification = document.querySelector('#notification');
 const close_btn = document.querySelector('#close-btn');
 
-const content = document.querySelector('#content')
-const buttons = document.querySelectorAll('button')
-const main = document.querySelector('main')
+const content = document.querySelector('#content');
+const buttons = document.querySelectorAll('button');
+const main = document.querySelector('main');
 
 const deleteElem = (element) => {
     setTimeout(() => {
-        element.remove()
+        element.remove();
     }, 3000)
 }
 
 const closeElem = (element) => {
     element.addEventListener('click', () => {
-        element.remove()
+        element.remove();
     })
 }
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
-        const elem = document.createElement('div')
-        elem.className = 'notification'
-        elem.id = 'notification'
-        elem.innerText = 'Good morning'
-        content.append(elem)
-        deleteElem(elem)
+        const elem = document.createElement('div');
+        elem.className = 'notification';
+        elem.id = 'notification';
+        elem.innerText = 'Good morning';
+        content.append(elem);
+        deleteElem(elem);
 
-        const close = document.createElement('button')
-        close.className = 'close-btn'
-        close.id = 'close-btn'
-        close.innerHTML = '&#10008'
-        elem.append(close)
-        closeElem(elem)
+        const close = document.createElement('button');
+        close.className = 'close-btn';
+        close.id = 'close-btn';
+        close.innerHTML = '&#10008';
+        elem.append(close);
+        closeElem(elem);
     })
 }
 
