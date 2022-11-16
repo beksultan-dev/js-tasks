@@ -6,9 +6,13 @@ const close_btn = document.querySelector('#close');
 
 const showNotification = ({ className, text }) => {
     notification.classList.remove('d-none');
-    notification.classList.add(className);
     close_btn.classList.remove('d-none');
+    notification.classList.add(className);
     notification.textContent = text;
+
+    close_btn.addEventListener('click', () => {
+        deleteClass({ className });
+    });
 }
 
 const deleteClass = ({ className }) => {
@@ -19,25 +23,13 @@ const deleteClass = ({ className }) => {
 }
 
 primary_btn.addEventListener('click', () => {
-    showNotification({ className: 'notification-primary', text: 'Notification 1' });
-
-    close_btn.addEventListener('click', () => {
-        deleteClass({ className: 'notification-primary' });
-    });
+    showNotification({ className: 'notification-primary', text: 'A simple warning alert - check it out!' });
 })
 
 secondary_btn.addEventListener('click', () => {
-    showNotification({ className: 'notification-secondary', text: 'Notification 2' });
-
-    close_btn.addEventListener('click', () => {
-        deleteClass({ className: 'notification-secondary' });
-    });
+    showNotification({ className: 'notification-secondary', text: 'A simple danger alert - check it out!' });
 })
 
 success_btn.addEventListener('click', () => {
-    showNotification({ className: 'notification-success', text: 'Notification 3' });
-
-    close_btn.addEventListener('click', () => {
-        deleteClass({ className: 'notification-success' });
-    });
+    showNotification({ className: 'notification-success', text: 'A simple info alert - check it out!' });
 })
