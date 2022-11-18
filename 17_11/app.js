@@ -1,31 +1,35 @@
 const content = document.querySelector('#content');
 const buttons = document.querySelectorAll('button');
 
-const deleteElemAfter = (element) => {
-    setTimeout(() => {
-        element.remove();
-    }, 2000)
-}
+const styleAttr = [];
+const textAttr = [];
+
+buttons.forEach((element) => {
+    styleAttr.push(element.dataset.class);
+})
+
+buttons.forEach((element) => {
+    textAttr.push(element.dataset.show);
+})
 
 const showNotification = () => {
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', () => {
-            const elem = document.createElement('div');
-            elem.innerText = 'Good morning';
-            content.append(elem);
-            deleteElemAfter(elem);
+    buttons.forEach((element, index) => {
+        element.addEventListener('click', () => {
+            content.innerHTML = `<div class="myBlock" data-style="${styleAttr[index]}" >${textAttr[index]}<button id="close-btn">x</button></div>`;
+            document.querySelector(`#close-btn`).addEventListener('click', () => {
+                content.innerHTML = '';
+            })
         })
-    }
+    })
 }
 showNotification();
-
 
 const ulBtn = document.querySelector('#ul-btn');
 const ulBlock = document.querySelector('ul');
 
 ulBtn.addEventListener('click', () => {
-    const list = document.createElement('li');
-    list.innerText = 'пункт';
-    ulBlock.append(list);
-    deleteElemAfter(list);
+    ulBlock.innerHTML = `<li>пункт <button id="close-btn-li">x</button></li>`;
+    document.querySelector('#close-btn-li').addEventListener('click', () => {
+        ulBlock.innerHTML = '';
+    })
 })
