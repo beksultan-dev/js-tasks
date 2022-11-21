@@ -1,0 +1,144 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 15px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    font-size: 19px;
+    border-radius: 10px;
+
+}
+
+.notification {
+    width: 700px;
+    padding: 10px 15px;
+    position: absolute;
+    margin: 0 auto;
+    border: 1px solid black;
+    top: 100px;
+    left: calc(50% - 350px);
+    border-radius: 10px;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(131, 131, 72);
+    color: white;
+}
+
+.close-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.content {
+    position: relative;
+}
+
+.modal-bg {
+    display: flex;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-container {
+    min-width: 450px;
+    min-height: fit-content;
+    border: black;
+    border-radius: 15px;
+    margin: auto;
+    background-color: white;
+}
+
+.notification-primary {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
+
+.notification-secondary {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+.notification-success {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+}
+
+.close-icon {
+    background: url(icon/close.svg) center center/cover no-repeat;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.modal-top-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hr {
+    border-top: 1px solid black;
+    opacity: 0.3;
+}
+
+.modal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    line-height: 2em;
+}
+
+.modal-mid {
+    padding: 15px;
+    line-height: 2em;
+    height: 120px;
+}
+
+.modal-bot {
+    min-height: 62px;
+    padding: 15px;
+    line-height: 2em;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-bot button:nth-child(1) {
+    background-color: #6c757d;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.modal-bot button:nth-child(2) {
+    background-color: #0d6efd;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+}
