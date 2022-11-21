@@ -6,20 +6,18 @@ const textAttr = [];
 
 buttons.forEach((element) => {
     styleAttr.push(element.dataset.class);
-})
-
-buttons.forEach((element) => {
     textAttr.push(element.dataset.show);
+
 })
 
 const showNotification = () => {
     buttons.forEach((element, index) => {
         element.addEventListener('click', () => {
             content.innerHTML = `<div class="myBlock" data-style="${styleAttr[index]}" >${textAttr[index]}<button id="close-btn">x</button></div>`;
-            document.querySelector(`#close-btn`).addEventListener('click', () => {
-                content.innerHTML = '';
-            })
         })
+    })
+    document.querySelector(`#close-btn`).addEventListener('click', () => {
+        content.innerHTML = '';
     })
 }
 showNotification();
@@ -29,7 +27,8 @@ const ulBlock = document.querySelector('ul');
 
 ulBtn.addEventListener('click', () => {
     ulBlock.innerHTML = `<li>пункт <button id="close-btn-li">x</button></li>`;
-    document.querySelector('#close-btn-li').addEventListener('click', () => {
-        ulBlock.innerHTML = '';
-    })
+})
+
+document.querySelector('#close-btn-li').addEventListener('click', () => {
+    ulBlock.innerHTML = '';
 })
