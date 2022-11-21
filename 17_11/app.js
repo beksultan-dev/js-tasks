@@ -1,5 +1,7 @@
-const content = document.querySelector('#content');
+const modal = document.querySelector('#content');
 const buttons = document.querySelectorAll('button');
+const ulBtn = document.querySelector('#ul-btn');
+const ulBlock = document.querySelector('ul');
 
 const styleAttr = [];
 const textAttr = [];
@@ -10,23 +12,25 @@ buttons.forEach((element) => {
 })
 
 const showNotification = () => {
-    buttons.forEach((element, index) => {
-        element.addEventListener('click', () => {
-            content.innerHTML = `<div class="myBlock" data-style="${styleAttr[index]}" >${textAttr[index]}<button id="close-btn">x</button></div>`;
-            document.querySelector(`#close-btn`).addEventListener('click', () => {
-                content.innerHTML = '';
-            })
-        })
+    modal.innerHTML = `<div class="myBlock" data-style="${styleAttr[index]}" >${textAttr[index]}<button id="close-btn">x</button></div>`;
+    document.querySelector(`#close-btn`).addEventListener('click', () => {
+        modal.innerHTML = '';
     })
 }
-showNotification();
 
-const ulBtn = document.querySelector('#ul-btn');
-const ulBlock = document.querySelector('ul');
+buttons.forEach(element => {
+    element.addEventListener('click', () => {
+        showNotification();
+    })
+})
 
-ulBtn.addEventListener('click', () => {
+const hideNotification = () => {
     ulBlock.innerHTML = `<li>пункт <button id="close-btn-li">x</button></li>`;
     document.querySelector('#close-btn-li').addEventListener('click', () => {
         ulBlock.innerHTML = '';
     })
+}
+
+ulBtn.addEventListener('click', () => {
+    hideNotification();
 })
